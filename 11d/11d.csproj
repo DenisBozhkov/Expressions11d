@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{6A07C174-3D0A-4C59-B4AD-0A4E379B4C8E}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>_11g</RootNamespace>
-    <AssemblyName>11g</AssemblyName>
+    <RootNamespace>_11d</RootNamespace>
+    <AssemblyName>11d</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Binomial.cs" />
     <Compile Include="IExpression.cs" />
     <Compile Include="ISolvable.cs" />
     <Compile Include="Polynomial.cs" />

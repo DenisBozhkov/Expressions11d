@@ -24,7 +24,10 @@ namespace _11d
             }
             return res;
         }
-        public abstract double[] Solve();
+        public virtual double[] Solve()
+        {
+            return Evaluate(0);
+        }
         public abstract double[] Evaluate(double a);
     }
 }
