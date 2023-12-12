@@ -20,5 +20,9 @@ namespace _11d
                 return new double[0];
             else return null;
         }
+        public override string ToString()
+        {
+            return coefficients[1] + "x+" + coefficients[0];
+        }
     }
 }
