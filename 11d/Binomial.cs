@@ -9,15 +9,15 @@ namespace _11d
     internal class Binomial : Polynomial
     {
         public Binomial(double a, double b)
-            : base(new double[] { b, a })
+            : base(new List<double>() { b, a })
         { }
 
-        public override double[] Evaluate(double a)
+        public override List<double> Evaluate(double a)
         {
             if (coefficients[1] != 0)
-                return new double[] { (a - coefficients[0]) / coefficients[1] };
+                return new List<double>() { (a - coefficients[0]) / coefficients[1] };
             else if (coefficients[0] != 0)
-                return new double[0];
+                return new List<double>();
             else return null;
         }
         public override string ToString()

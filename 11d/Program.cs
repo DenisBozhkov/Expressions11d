@@ -12,22 +12,26 @@ namespace _11d
         {
             double a = double.Parse(Console.ReadLine());
             double b = double.Parse(Console.ReadLine());
-            Solve(new Binomial(a, b));
+            double c = double.Parse(Console.ReadLine());
+            Solve(new Trinomial(a, b, c));
         }
-        static void Solve(Binomial binomial)
+        static void Solve(ISolvable solvable)
         {
-            double[] result = binomial.Solve();
+            List<double> result = solvable.Solve();
             if (result == null)
             {
-                Console.WriteLine(binomial + "=0 has infinitely many solutions");
+                Console.WriteLine(solvable + "=0 has infinitely many solutions");
             }
-            else if (result.Length == 0)
+            else if (result.Count == 0)
             {
-                Console.WriteLine(binomial + "=0 has no solutions!");
+                Console.WriteLine(solvable + "=0 has no solutions!");
             }
             else
             {
-                Console.WriteLine(binomial + "=0 has one solution: " + result[0]);
+                Console.Write(solvable + "=0 has " + result.Count + " solutions: ");
+                for (int i = 0; i < result.Count; i++)
+                    Console.Write(result[i] + " ");
+                Console.WriteLine();
             }
         }
     }

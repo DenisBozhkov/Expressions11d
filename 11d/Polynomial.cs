@@ -8,13 +8,13 @@ namespace _11d
 {
     internal abstract class Polynomial : IExpression, ISolvable
     {
-        protected double[] coefficients;
-        public Polynomial(double[] coefficients)
+        protected List<double> coefficients;
+        public Polynomial(List<double> coefficients)
         {
             this.coefficients = coefficients;
         }
         public int Power
-        { get { return coefficients.Length - 1; } }
+        { get { return coefficients.Count - 1; } }
         public double Calculate(double x)
         {
             double res = coefficients[Power];
@@ -24,10 +24,10 @@ namespace _11d
             }
             return res;
         }
-        public virtual double[] Solve()
+        public virtual List<double> Solve()
         {
             return Evaluate(0);
         }
-        public abstract double[] Evaluate(double a);
+        public abstract List<double> Evaluate(double a);
     }
 }

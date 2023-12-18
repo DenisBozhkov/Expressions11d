@@ -8,7 +8,7 @@ namespace _11d
 {
     internal interface ISolvable
     {
-        double[] Solve();
-        double[] Evaluate(double a);
+        List<double> Solve();
+        List<double> Evaluate(double a);
     }
 }
