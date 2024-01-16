@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _11d
 {
-    internal class Binomial : Polynomial
+    public class Binomial : Polynomial
     {
         public Binomial(double a, double b)
             : base(new List<double>() { b, a })

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace _11d
 {
-    internal class Trinomial : Binomial
+    public class Trinomial : Binomial
     {
-        public Trinomial(double a, double b, double c) : base(b, c)
+        public Trinomial(double a, double b, double c) : base(c, b)
         {
             coefficients.Add(a);
         }
